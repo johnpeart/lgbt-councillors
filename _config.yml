@@ -1,0 +1,83 @@
+######################
+# Site configuration #
+######################
+title: "Councillors who are LGBT+"
+description: "A website and dataset listing the councillors in the UK local authorities who say they are lesbian, gay, bisexual or trans or have another minority sexual orientation or gender identity (LGBT+)."
+author: "John Peart"
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://councillors.whoare.lgbt"
+
+####################
+# Feature settings #
+####################
+banner-mode: true
+banner-mode--header: "Under development"
+banner-mode--body: "This dataset is currently under active development and not currently up to date."
+
+# Shows a blockquote on data pages exposing some of the underlying calculations
+error-check: true
+
+analytics: true
+analytics-token: "d36444326796457985d7fc75774c393e"
+
+###############
+# Asset paths #
+###############
+image-path: "/assets/images"
+css-path: "/assets/styles"
+js-path: "/assets/scripts"
+social-media-image: "/assets/images/site/social-media.png"
+favicon: "/favicon.ico"
+favicon-svg: "/assets/images/site/favicon.svg"
+favicon-pinned-svg: "/assets/images/site/favicon-pinned-svg.svg"
+favicon-large-png: "/assets/images/site/favicon-large-png.png"
+theme-colour: "#373151"
+
+#######################
+# <link rel="me" ...> #
+#######################
+# Twitter
+twitter-url: "https://twitter.com/johnpeart" # Twitter handle i.e. joebloggs
+twitter-handle: "johnpeart" # Twitter handle i.e. joebloggs
+# Mastodon
+mastodon-url: "https://mastodon.social/@johnpeart"
+mastodon-handle: "johnpeart@mastodon.social"
+# Github
+github-url:  "https://github.com/johnpeart/lgbt-councillors"
+github-handle:  "johnpeart"
+
+###############
+# Collections #
+###############
+
+collections:
+  local-authorities:
+    output: true
+    permalink: /local-authority/:name
+
+##################
+# Build settings #
+##################
+permalink: pretty
+markdown: kramdown
+future: false
+highlighter: rouge
+sass:
+  sass_dir: _sass
+
+plugins:
+- jekyll-sitemap
+- jekyll-redirect-from
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

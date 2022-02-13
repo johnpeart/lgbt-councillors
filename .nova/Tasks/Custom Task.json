@@ -1,0 +1,18 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "bundle update\nbundle install\nbundle exec jekyll build"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "bundle exec jekyll clean"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "bundle exec jekyll serve -o --liveReload"
+    }
+  },
+  "identifier" : "465ED4AA-B010-4297-AF0E-F83FAFDD461E",
+  "openLogOnRun" : "start"
+}
