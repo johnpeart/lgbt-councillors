@@ -85,7 +85,7 @@ a#home-link span.wordmark {
         @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
     }
 
-    padding: 10pt 0 0 0;
+    padding: 5pt 0;
     float: left;
 
     @include clearfix;
