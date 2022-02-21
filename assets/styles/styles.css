@@ -1629,7 +1629,7 @@ header#site-navigation img#banner-icon { height: 42pt; width: auto; margin-right
 
 @media only screen and (min-width: 1920px) { header#site-navigation img#banner-icon { height: 52pt; } }
 
-a#home-link span.wordmark { display: block; font-size: 14pt; line-height: 16pt; font-weight: bold; font-style: normal; text-transform: none; text-align: left; padding: 10pt 0 0 0; float: left; }
+a#home-link span.wordmark { display: block; font-size: 14pt; line-height: 16pt; font-weight: bold; font-style: normal; text-transform: none; text-align: left; padding: 5pt 0; float: left; }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) { a#home-link span.wordmark { font-size: 12pt; } }
 
