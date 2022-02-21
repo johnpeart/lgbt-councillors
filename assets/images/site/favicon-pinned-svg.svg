@@ -1,65 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 16 16" width="16" height="16">
   <defs/>
-  <metadata> Produced by OmniGraffle 7.18.5\n2021-08-08 21:15:40 +0000</metadata>
-  <g id="favicon-pinned-svg" stroke="none" stroke-dasharray="none" fill="none" stroke-opacity="1" fill-opacity="1">
+  <metadata> Produced by OmniGraffle 7.19.4\n2022-02-21 23:35:17 +0000</metadata>
+  <g id="favicon-pinned-svg" fill-opacity="1" stroke="none" fill="none" stroke-opacity="1" stroke-dasharray="none">
     <title>favicon-pinned-svg</title>
     <g id="favicon-pinned-svg_Layer_1">
       <title>Layer 1</title>
-      <g id="Graphic_88">
-        <rect x="3" y="3" width="10" height="1" fill="black"/>
+      <g id="Graphic_128">
+        <path d="M 8 8 L 6.2000474 1.2824856 C 8.599984 .6394245 11.160686 1.3255625 12.917562 3.082438 L 8 8 Z" fill="white"/>
+        <path d="M 8 8 L 6.2000474 1.2824856 C 8.599984 .6394245 11.160686 1.3255625 12.917562 3.082438 L 8 8 Z" stroke="#373151" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1"/>
       </g>
-      <g id="Graphic_87">
-        <rect x="12" y="2" width="1" height="2" fill="black"/>
+      <g id="Graphic_126">
+        <path d="M 8 8 L 12.917562 3.082438 C 14.674437 4.839314 15.360576 7.400016 14.717514 9.799953 L 8 8 Z" fill="white"/>
+        <path d="M 8 8 L 12.917562 3.082438 C 14.674437 4.839314 15.360576 7.400016 14.717514 9.799953 L 8 8 Z" stroke="#373151" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1"/>
       </g>
-      <g id="Graphic_86">
-        <rect x="9" y="0" width="1" height="4" fill="black"/>
+      <g id="Graphic_124">
+        <path d="M 8 8 L 1.2824856 6.2000474 C 1.9255467 3.8001107 3.8001107 1.9255467 6.2000474 1.2824856 L 8 8 Z" fill="white"/>
+        <path d="M 8 8 L 1.2824856 6.2000474 C 1.9255467 3.8001107 3.8001107 1.9255467 6.2000474 1.2824856 L 8 8 Z" stroke="#373151" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1"/>
       </g>
-      <g id="Graphic_85">
-        <rect x="6" y="0" width="1" height="4" fill="black"/>
+      <g id="Graphic_121">
+        <path d="M 8 8 L 3.082438 12.917562 C 1.3255625 11.160686 .6394245 8.599984 1.2824856 6.2000474 L 8 8 Z" fill="white"/>
+        <path d="M 8 8 L 3.082438 12.917562 C 1.3255625 11.160686 .6394245 8.599984 1.2824856 6.2000474 L 8 8 Z" stroke="#373151" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1"/>
       </g>
-      <g id="Graphic_84">
-        <rect x="3" y="2" width="1" height="2" fill="black"/>
+      <g id="Graphic_119">
+        <path d="M 8 8 L 14.717514 9.799953 C 14.074453 12.19989 12.19989 14.074453 9.799953 14.717514 L 8 8 Z" fill="white"/>
+        <path d="M 8 8 L 14.717514 9.799953 C 14.074453 12.19989 12.19989 14.074453 9.799953 14.717514 L 8 8 Z" stroke="#373151" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1"/>
       </g>
-      <g id="Graphic_81">
-        <rect x="3" y="5" width="10" height="9" fill="black"/>
+      <g id="Graphic_117">
+        <path d="M 8 8 L 9.799953 14.717514 C 7.400016 15.360576 4.839314 14.674437 3.082438 12.917562 L 8 8 Z" fill="white"/>
+        <path d="M 8 8 L 9.799953 14.717514 C 7.400016 15.360576 4.839314 14.674437 3.082438 12.917562 L 8 8 Z" stroke="#373151" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1"/>
       </g>
-      <g id="Graphic_80">
-        <rect x="6" y="5" width="1" height="11" fill="black"/>
-      </g>
-      <g id="Graphic_79">
-        <rect x="9" y="5" width="1" height="11" fill="black"/>
-      </g>
-      <g id="Graphic_78">
-        <rect x="12" y="5" width="1" height="11" fill="black"/>
-      </g>
-      <g id="Graphic_77">
-        <rect x="3" y="5" width="1" height="11" fill="black"/>
-      </g>
-      <g id="Graphic_74">
-        <rect x="14" y="14" width="2" height="2" fill="black"/>
-      </g>
-      <g id="Graphic_73">
-        <rect x="14" y="11" width="2" height="2" fill="black"/>
-      </g>
-      <g id="Graphic_72">
-        <rect x="14" y="8" width="2" height="2" fill="black"/>
-      </g>
-      <g id="Graphic_71">
-        <rect x="14" y="5" width="2" height="2" fill="black"/>
-      </g>
-      <g id="Graphic_70">
-        <rect x="0" y="14" width="2" height="2" fill="black"/>
-      </g>
-      <g id="Graphic_69">
-        <rect x="0" y="11" width="2" height="2" fill="black"/>
-      </g>
-      <g id="Graphic_68">
-        <rect x="0" y="8" width="2" height="2" fill="black"/>
-      </g>
-      <g id="Graphic_67">
-        <rect x="0" y="5" width="2" height="2" fill="black"/>
+      <g id="Graphic_116">
+        <circle cx="8" cy="8" r="3.00000479370568" fill="white"/>
+        <circle cx="8" cy="8" r="3.00000479370568" stroke="#373151" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1"/>
       </g>
     </g>
   </g>
