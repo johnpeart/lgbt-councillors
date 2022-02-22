@@ -1521,55 +1521,55 @@ p.member-name { grid-area: member-name; font-size: 11pt; line-height: 15pt; padd
 
 @media only screen and (min-width: 1920px) { p.member-name { text-align: left; } }
 
-p.member-ward { grid-area: member-ward; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
+p.member-electoral-district { grid-area: member-ward; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-ward { font-size: 12pt; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-electoral-district { font-size: 12pt; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-ward { font-size: 13pt; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-electoral-district { font-size: 13pt; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-ward { font-size: 14pt; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-electoral-district { font-size: 14pt; } }
 
-@media only screen and (min-width: 1920px) { p.member-ward { font-size: 16pt; } }
+@media only screen and (min-width: 1920px) { p.member-electoral-district { font-size: 16pt; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-ward { line-height: 17pt; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-electoral-district { line-height: 17pt; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-ward { line-height: 18pt; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-electoral-district { line-height: 18pt; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-ward { line-height: 19pt; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-electoral-district { line-height: 19pt; } }
 
-@media only screen and (min-width: 1920px) { p.member-ward { line-height: 21pt; } }
+@media only screen and (min-width: 1920px) { p.member-electoral-district { line-height: 21pt; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-ward { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-electoral-district { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-ward { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-electoral-district { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-ward { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-electoral-district { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 1920px) { p.member-ward { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 1920px) { p.member-electoral-district { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-ward { font-weight: normal; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-electoral-district { font-weight: normal; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-ward { font-weight: normal; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-electoral-district { font-weight: normal; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-ward { font-weight: normal; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-electoral-district { font-weight: normal; } }
 
-@media only screen and (min-width: 1920px) { p.member-ward { font-weight: normal; } }
+@media only screen and (min-width: 1920px) { p.member-electoral-district { font-weight: normal; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-ward { font-style: normal; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-electoral-district { font-style: normal; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-ward { font-style: normal; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-electoral-district { font-style: normal; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-ward { font-style: normal; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-electoral-district { font-style: normal; } }
 
-@media only screen and (min-width: 1920px) { p.member-ward { font-style: normal; } }
+@media only screen and (min-width: 1920px) { p.member-electoral-district { font-style: normal; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-ward { text-align: left; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-electoral-district { text-align: left; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-ward { text-align: left; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-electoral-district { text-align: left; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-ward { text-align: left; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-electoral-district { text-align: left; } }
 
-@media only screen and (min-width: 1920px) { p.member-ward { text-align: left; } }
+@media only screen and (min-width: 1920px) { p.member-electoral-district { text-align: left; } }
 
 details[open] > summary { border-bottom: 1px dotted #cbc9cd; }
 
