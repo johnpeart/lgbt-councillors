@@ -17,11 +17,10 @@ layout: default
     <div class="summary-data">
         <p class="lead">On {{ now | date: "%d %B %Y" }}, at least:</p>
         
-        
         {% for entry in dataset %}
-          {% if entry.end-date == "present" %}
-          {% assign count--councillors = count--councillors | plus: 1 %}
-          {% assign local-authorities = local-authorities | push: entry.local-authority | uniq %}
+          {% if entry.end-date == "present" or entry.end-date == blank %}
+            {% assign count--councillors = count--councillors | plus: 1 %}
+            {% assign local-authorities = local-authorities | push: entry.local-authority | uniq %}
           {% endif %}
         {% endfor %}
         
@@ -54,7 +53,7 @@ layout: default
   <h1>All councillors</h1>
   
   {% for entry in dataset %}
-    {% if entry.end-date == "present" %}
+    {% if entry.end-date == "present" or entry.end-date == blank %}
     
     {% assign cllrName = entry.name %}
     {% assign cllrLocalAuthority = entry.local-authority %}
