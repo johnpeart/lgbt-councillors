@@ -1,9 +1,9 @@
 {% if site.error-check == true %}
 <blockquote>
     <p><strong>NOW:</strong> {{ now }}</p>
-    <p><strong>PARLIAMENT START DATE:</strong> {{ parliamentStartDate }}</p>
-    <p><strong>PARLIAMENT END DATE:</strong> {{ parliamentEndDate }}</p>
-    <p><strong>DATE TO CHECK AGAINST:</strong> {{ parliamentComparatorDate }}</p>
-    <p><strong>PARTIES IN THIS PARLIAMENT:</strong> {{ validParties | join: ', ' }}</p>
+    <p><strong>COUNCIL START DATE:</strong> {{ termStartDate }}</p>
+    <p><strong>COUNCIL END DATE:</strong> {{ termEndDate }}</p>
+    <p><strong>DATE TO CHECK AGAINST:</strong> {{ termComparatorDate }}</p>
+    <p><strong>PARTIES IN THIS PERIOD:</strong> {{ validParties | join: ', ' }}</p>
 </blockquote>
 {% endif %}
