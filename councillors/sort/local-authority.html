@@ -5,7 +5,7 @@
 
 	<!--    SITE BUILD INFORMATION    -->
 <!--    Date built:    2022-03-06    -->
-<!--    Time built:    15:08    -->
+<!--    Time built:    16:34    -->
 <!--    Site URL:    https://councillors.whoare.lgbt    -->
 <!--    Site base URL:        -->
 
@@ -29,10 +29,10 @@
 
 	<!-- Base URLS, duplicate URLs and feeds -->
 	<meta name="url" content="">
-	<base href="/councillors/">
+	<base href="/councillors/sort/local-authority">
 	<!-- Links to top level resource in an hierarchical structure -->
 	<link rel="index" href="">
-	<link rel="canonical" href="/councillors/">
+	<link rel="canonical" href="/councillors/sort/local-authority">
 	<link rel="alternate" href="/feed.xml" type="application/rss+xml" title="Councillors who are LGBT+">
 	<!-- Links to a document that describes a collection of records, documents, or other materials of historical interest. -->
 	<link rel="archives" href="/archives">
@@ -46,7 +46,7 @@
 <link rel="me" href="https://mastodon.social/@johnpeart" type="text/html">
 
 	<!-- Facebook Open Graph settings -->
-	<meta property="og:url" 				content="https://councillors.whoare.lgbt/councillors/">
+	<meta property="og:url" 				content="https://councillors.whoare.lgbt/councillors/sort/local-authority">
 
 <meta property="og:type" 			content="website" />
 
@@ -79,7 +79,7 @@
 
 <meta name="twitter:creator" 		content="@johnpeart">
 
-<meta name="twitter:url" 			content="https://councillors.whoare.lgbt/councillors/">
+<meta name="twitter:url" 			content="https://councillors.whoare.lgbt/councillors/sort/local-authority">
 
 <meta name="twitter:title" 			content="Councillors who are LGBT+">
 
@@ -198,7 +198,20 @@
 
 <section class="all-councillors">
   
-  <h1>All councillors</h1>
+  <span class="sort">
+    <h1>Councillors</h1>
+    <p><strong>Sort by:</strong>
+    <br>
+    
+      <a href="/councillors/sort/name">Name</a>, 
+    
+    
+      Local authority,
+    
+    
+      <a href="/councillors/sort/party">Party</a>
+    </p>
+  </span>
   
   
     
@@ -217,18 +230,18 @@
     
     
   
-    <details class="member">
+    <details class="cllr">
       <summary>
-          <div class="member-summary">
-              <img class="member-portrait Independent" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person Eight</p>
-              <p class="member-party">Independent</p>
-              <p class="member-electoral-district">Taunton Deane Town Council</p>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Labour" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person Two</p>
+              <p class="cllr-party">Labour</p>
+              <p class="cllr-electoral-district">Camden Borough Council</p>
               <span class="expand-icon"></span>
           </div>
       </summary>
     
-      <section class="member-info">
+      <section class="cllr-info">
     
           <p class="gender">
               <strong class="label">First elected</strong>
@@ -240,7 +253,7 @@
           <p class="identity">
               <strong class="label">Identity</strong>
               <span class="data">
-                  Gay
+                  Bisexual
               </span>
           </p>
     
@@ -266,14 +279,6 @@
     
   
     
-  
-    
-  
-    
-  
-    
-  
-    
     
     
     
@@ -289,18 +294,18 @@
     
     
   
-    <details class="member">
+    <details class="cllr">
       <summary>
-          <div class="member-summary">
-              <img class="member-portrait Labour" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person Five</p>
-              <p class="member-party">Labour</p>
-              <p class="member-electoral-district">Haringey Borough Council</p>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Labour" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person Ten</p>
+              <p class="cllr-party">Labour</p>
+              <p class="cllr-electoral-district">Camden Borough Council</p>
               <span class="expand-icon"></span>
           </div>
       </summary>
     
-      <section class="member-info">
+      <section class="cllr-info">
     
           <p class="gender">
               <strong class="label">First elected</strong>
@@ -319,70 +324,6 @@
           <p class="source">
               <strong class="label">Source</strong>
               <span class="data">
-                  <a href="http://www.example.com">Source Publication A</a>
-              </span>
-          </p>
-    
-          <p class="source-access-date">
-              <strong class="label">Source publication date</strong>
-              <span class="data">
-                  2020-01-03
-              </span>
-          </p>
-    
-          
-    
-      </section>
-    </details>
-  
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-    <details class="member">
-      <summary>
-          <div class="member-summary">
-              <img class="member-portrait Independent" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person Four</p>
-              <p class="member-party">Independent</p>
-              <p class="member-electoral-district">Islington Borough Council</p>
-              <span class="expand-icon"></span>
-          </div>
-      </summary>
-    
-      <section class="member-info">
-    
-          <p class="gender">
-              <strong class="label">First elected</strong>
-              <span class="data">
-                  2021-05-06
-              </span>
-          </p>
-    
-          <p class="identity">
-              <strong class="label">Identity</strong>
-              <span class="data">
-                  Lesbian
-              </span>
-          </p>
-    
-          <p class="source">
-              <strong class="label">Source</strong>
-              <span class="data">
                   <a href="http://www.example.com">Source Publication B</a>
               </span>
           </p>
@@ -419,153 +360,18 @@
     
     
   
-    <details class="member">
+    <details class="cllr">
       <summary>
-          <div class="member-summary">
-              <img class="member-portrait Conservative" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person Nine</p>
-              <p class="member-party">Conservative</p>
-              <p class="member-electoral-district">Islington Borough Council</p>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Liberal Democrat" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person Seven</p>
+              <p class="cllr-party">Liberal Democrat</p>
+              <p class="cllr-electoral-district">Exeter City Council</p>
               <span class="expand-icon"></span>
           </div>
       </summary>
     
-      <section class="member-info">
-    
-          <p class="gender">
-              <strong class="label">First elected</strong>
-              <span class="data">
-                  2021-05-06
-              </span>
-          </p>
-    
-          <p class="identity">
-              <strong class="label">Identity</strong>
-              <span class="data">
-                  Lesbian
-              </span>
-          </p>
-    
-          <p class="source">
-              <strong class="label">Source</strong>
-              <span class="data">
-                  <a href="http://www.example.com">Source Publication A</a>
-              </span>
-          </p>
-    
-          <p class="source-access-date">
-              <strong class="label">Source publication date</strong>
-              <span class="data">
-                  2020-01-03
-              </span>
-          </p>
-    
-          
-    
-      </section>
-    </details>
-  
-    
-  
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-    <details class="member">
-      <summary>
-          <div class="member-summary">
-              <img class="member-portrait Conservative" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person One</p>
-              <p class="member-party">Conservative</p>
-              <p class="member-electoral-district">Islington Borough Council</p>
-              <span class="expand-icon"></span>
-          </div>
-      </summary>
-    
-      <section class="member-info">
-    
-          <p class="gender">
-              <strong class="label">First elected</strong>
-              <span class="data">
-                  2021-05-06
-              </span>
-          </p>
-    
-          <p class="identity">
-              <strong class="label">Identity</strong>
-              <span class="data">
-                  LGBT+
-              </span>
-          </p>
-    
-          <p class="source">
-              <strong class="label">Source</strong>
-              <span class="data">
-                  <a href="http://www.example.com">Source Publication A</a>
-              </span>
-          </p>
-    
-          <p class="source-access-date">
-              <strong class="label">Source publication date</strong>
-              <span class="data">
-                  2020-01-03
-              </span>
-          </p>
-    
-          
-          <div class="member-notes">
-              <p>A topical note</p>
-
-          </div>
-          
-    
-      </section>
-    </details>
-  
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-    <details class="member">
-      <summary>
-          <div class="member-summary">
-              <img class="member-portrait Liberal Democrat" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person Seven</p>
-              <p class="member-party">Liberal Democrat</p>
-              <p class="member-electoral-district">Exeter City Council</p>
-              <span class="expand-icon"></span>
-          </div>
-      </summary>
-    
-      <section class="member-info">
+      <section class="cllr-info">
     
           <p class="gender">
               <strong class="label">First elected</strong>
@@ -622,18 +428,353 @@
     
     
   
-    <details class="member">
+    <details class="cllr">
       <summary>
-          <div class="member-summary">
-              <img class="member-portrait Labour" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person Six</p>
-              <p class="member-party">Labour</p>
-              <p class="member-electoral-district">Plymouth City Council</p>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Labour" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person Five</p>
+              <p class="cllr-party">Labour</p>
+              <p class="cllr-electoral-district">Haringey Borough Council</p>
               <span class="expand-icon"></span>
           </div>
       </summary>
     
-      <section class="member-info">
+      <section class="cllr-info">
+    
+          <p class="gender">
+              <strong class="label">First elected</strong>
+              <span class="data">
+                  2021-05-06
+              </span>
+          </p>
+    
+          <p class="identity">
+              <strong class="label">Identity</strong>
+              <span class="data">
+                  Trans
+              </span>
+          </p>
+    
+          <p class="source">
+              <strong class="label">Source</strong>
+              <span class="data">
+                  <a href="http://www.example.com">Source Publication A</a>
+              </span>
+          </p>
+    
+          <p class="source-access-date">
+              <strong class="label">Source publication date</strong>
+              <span class="data">
+                  2020-01-03
+              </span>
+          </p>
+    
+          
+    
+      </section>
+    </details>
+  
+    
+  
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <details class="cllr">
+      <summary>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Conservative" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person One</p>
+              <p class="cllr-party">Conservative</p>
+              <p class="cllr-electoral-district">Islington Borough Council</p>
+              <span class="expand-icon"></span>
+          </div>
+      </summary>
+    
+      <section class="cllr-info">
+    
+          <p class="gender">
+              <strong class="label">First elected</strong>
+              <span class="data">
+                  2021-05-06
+              </span>
+          </p>
+    
+          <p class="identity">
+              <strong class="label">Identity</strong>
+              <span class="data">
+                  LGBT+
+              </span>
+          </p>
+    
+          <p class="source">
+              <strong class="label">Source</strong>
+              <span class="data">
+                  <a href="http://www.example.com">Source Publication A</a>
+              </span>
+          </p>
+    
+          <p class="source-access-date">
+              <strong class="label">Source publication date</strong>
+              <span class="data">
+                  2020-01-03
+              </span>
+          </p>
+    
+          
+          <div class="cllr-notes">
+              <p>A topical note</p>
+
+          </div>
+          
+    
+      </section>
+    </details>
+  
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <details class="cllr">
+      <summary>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Liberal Democrat" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person Three</p>
+              <p class="cllr-party">Liberal Democrat</p>
+              <p class="cllr-electoral-district">Islington Borough Council</p>
+              <span class="expand-icon"></span>
+          </div>
+      </summary>
+    
+      <section class="cllr-info">
+    
+          <p class="gender">
+              <strong class="label">First elected</strong>
+              <span class="data">
+                  2021-05-06
+              </span>
+          </p>
+    
+          <p class="identity">
+              <strong class="label">Identity</strong>
+              <span class="data">
+                  Gay
+              </span>
+          </p>
+    
+          <p class="source">
+              <strong class="label">Source</strong>
+              <span class="data">
+                  <a href="http://www.example.com">Source Publication A</a>
+              </span>
+          </p>
+    
+          <p class="source-access-date">
+              <strong class="label">Source publication date</strong>
+              <span class="data">
+                  2020-01-03
+              </span>
+          </p>
+    
+          
+    
+      </section>
+    </details>
+  
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <details class="cllr">
+      <summary>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Independent" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person Four</p>
+              <p class="cllr-party">Independent</p>
+              <p class="cllr-electoral-district">Islington Borough Council</p>
+              <span class="expand-icon"></span>
+          </div>
+      </summary>
+    
+      <section class="cllr-info">
+    
+          <p class="gender">
+              <strong class="label">First elected</strong>
+              <span class="data">
+                  2021-05-06
+              </span>
+          </p>
+    
+          <p class="identity">
+              <strong class="label">Identity</strong>
+              <span class="data">
+                  Lesbian
+              </span>
+          </p>
+    
+          <p class="source">
+              <strong class="label">Source</strong>
+              <span class="data">
+                  <a href="http://www.example.com">Source Publication B</a>
+              </span>
+          </p>
+    
+          <p class="source-access-date">
+              <strong class="label">Source publication date</strong>
+              <span class="data">
+                  2020-01-03
+              </span>
+          </p>
+    
+          
+    
+      </section>
+    </details>
+  
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <details class="cllr">
+      <summary>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Conservative" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person Nine</p>
+              <p class="cllr-party">Conservative</p>
+              <p class="cllr-electoral-district">Islington Borough Council</p>
+              <span class="expand-icon"></span>
+          </div>
+      </summary>
+    
+      <section class="cllr-info">
+    
+          <p class="gender">
+              <strong class="label">First elected</strong>
+              <span class="data">
+                  2021-05-06
+              </span>
+          </p>
+    
+          <p class="identity">
+              <strong class="label">Identity</strong>
+              <span class="data">
+                  Lesbian
+              </span>
+          </p>
+    
+          <p class="source">
+              <strong class="label">Source</strong>
+              <span class="data">
+                  <a href="http://www.example.com">Source Publication A</a>
+              </span>
+          </p>
+    
+          <p class="source-access-date">
+              <strong class="label">Source publication date</strong>
+              <span class="data">
+                  2020-01-03
+              </span>
+          </p>
+    
+          
+    
+      </section>
+    </details>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    <details class="cllr">
+      <summary>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Labour" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person Six</p>
+              <p class="cllr-party">Labour</p>
+              <p class="cllr-electoral-district">Plymouth City Council</p>
+              <span class="expand-icon"></span>
+          </div>
+      </summary>
+    
+      <section class="cllr-info">
     
           <p class="gender">
               <strong class="label">First elected</strong>
@@ -664,7 +805,7 @@
           </p>
     
           
-          <div class="member-notes">
+          <div class="cllr-notes">
               <p>Some other example topical note</p>
 
           </div>
@@ -693,84 +834,18 @@
     
     
   
-    <details class="member">
+    <details class="cllr">
       <summary>
-          <div class="member-summary">
-              <img class="member-portrait Labour" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person Ten</p>
-              <p class="member-party">Labour</p>
-              <p class="member-electoral-district">Camden Borough Council</p>
+          <div class="cllr-summary">
+              <img class="cllr-portrait Independent" src="/assets/images/councillors/generic.jpg" loading="lazy">
+              <p class="cllr-name">Person Eight</p>
+              <p class="cllr-party">Independent</p>
+              <p class="cllr-electoral-district">Taunton Deane Town Council</p>
               <span class="expand-icon"></span>
           </div>
       </summary>
     
-      <section class="member-info">
-    
-          <p class="gender">
-              <strong class="label">First elected</strong>
-              <span class="data">
-                  2021-05-06
-              </span>
-          </p>
-    
-          <p class="identity">
-              <strong class="label">Identity</strong>
-              <span class="data">
-                  Trans
-              </span>
-          </p>
-    
-          <p class="source">
-              <strong class="label">Source</strong>
-              <span class="data">
-                  <a href="http://www.example.com">Source Publication B</a>
-              </span>
-          </p>
-    
-          <p class="source-access-date">
-              <strong class="label">Source publication date</strong>
-              <span class="data">
-                  2020-01-03
-              </span>
-          </p>
-    
-          
-    
-      </section>
-    </details>
-  
-    
-  
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-    <details class="member">
-      <summary>
-          <div class="member-summary">
-              <img class="member-portrait Liberal Democrat" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person Three</p>
-              <p class="member-party">Liberal Democrat</p>
-              <p class="member-electoral-district">Islington Borough Council</p>
-              <span class="expand-icon"></span>
-          </div>
-      </summary>
-    
-      <section class="member-info">
+      <section class="cllr-info">
     
           <p class="gender">
               <strong class="label">First elected</strong>
@@ -789,74 +864,6 @@
           <p class="source">
               <strong class="label">Source</strong>
               <span class="data">
-                  <a href="http://www.example.com">Source Publication A</a>
-              </span>
-          </p>
-    
-          <p class="source-access-date">
-              <strong class="label">Source publication date</strong>
-              <span class="data">
-                  2020-01-03
-              </span>
-          </p>
-    
-          
-    
-      </section>
-    </details>
-  
-    
-  
-    
-  
-    
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-    <details class="member">
-      <summary>
-          <div class="member-summary">
-              <img class="member-portrait Labour" src="/assets/images/councillors/generic.jpg" loading="lazy">
-              <p class="member-name">Person Two</p>
-              <p class="member-party">Labour</p>
-              <p class="member-electoral-district">Camden Borough Council</p>
-              <span class="expand-icon"></span>
-          </div>
-      </summary>
-    
-      <section class="member-info">
-    
-          <p class="gender">
-              <strong class="label">First elected</strong>
-              <span class="data">
-                  2021-05-06
-              </span>
-          </p>
-    
-          <p class="identity">
-              <strong class="label">Identity</strong>
-              <span class="data">
-                  Bisexual
-              </span>
-          </p>
-    
-          <p class="source">
-              <strong class="label">Source</strong>
-              <span class="data">
                   <a href="http://www.example.com">Source Publication B</a>
               </span>
           </p>
@@ -872,6 +879,12 @@
     
       </section>
     </details>
+  
+    
+  
+    
+  
+    
   
     
   
