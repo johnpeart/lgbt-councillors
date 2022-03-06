@@ -81,6 +81,54 @@ aside.errors p:first-of-type {
   color: map-get($colors, "grey-1")
 }
 
+ul.navigation {
+
+  display: grid;
+
+  @include toggleSizes(
+    grid-template-columns,
+    1fr,
+    1fr,
+    1fr,
+    1fr,
+    1fr
+  );
+  
+  grid-gap: 0;
+
+  background: map-get($colors, "white");
+
+  list-style: none;
+
+  padding: 0 $container-padding * 2;
+
+}
+
+ul.navigation li {
+
+  padding: 0;
+  margin: 0;
+
+  @include toggleSizes(max-width,
+    100%,
+    100%,
+    100%,
+    100%,
+    100%
+  );
+
+  &:nth-of-type(2) {
+    grid-column: 1;
+  }
+  padding: $container-padding * 2 0;
+  border-top: 1px dotted map-get($colors, "grey-3");
+
+  &:first-of-type {
+    border-top: none;
+  }
+
+}
+
 ul.local-authorities {
 
   display: grid;
@@ -138,6 +186,12 @@ div.summary-data {
   p.lead {
     border-bottom: 1px dotted map-get($colors, "grey-3");
   }
+    
+  p.bottom {
+    border-bottom: none;
+    border-top: 1px dotted map-get($colors, "grey-3");
+  }
+  
   p.note{
     @each $style, $sizes in $note {
       @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
@@ -175,10 +229,17 @@ div.summary-block p {
 
   display: grid;
 
-  grid-template-rows: auto auto;
+  @include toggleSizes(grid-template-rows,
+    auto auto,
+    auto auto,
+    2fr 1fr,
+    2fr 1fr,
+    2fr 1fr
+  );
+  
   grid-gap: $container-padding;
 
-  align-items: center;
+  align-items: top;
 
 }
 

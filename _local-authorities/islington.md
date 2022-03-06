@@ -1,5 +1,5 @@
 ---
 layout: local-authority
-name: "Islington Council"
+name: "Islington"
 type: "Borough Council"
 ---

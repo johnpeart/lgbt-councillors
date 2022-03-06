@@ -1,3 +1,3 @@
 ---
-layout: all-councillors
+layout: home
 ---

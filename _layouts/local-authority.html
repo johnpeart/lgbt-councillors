@@ -1,5 +1,31 @@
 ---
 layout: default
 ---
+{% assign now = "now" | date: "%s" | times: 1 %}
+
+<section class="summary-data">
+
+    <h1>{{ page.name }}’s LGBT+ councillors at a glance</h1>
+
+    <div class="summary-data">
+        <p class="lead">As of {{ now | date: "%d %B %Y" }}, in {{ page.name }} {{ page.type }}, at least:</p>
+
+        <div class="summary-block">
+
+            <p>
+                <span class="summary-total--number top-padding">XX</span>
+                <span class="summary-total--label">Councillors are LGBT+</span>
+            </p>
+
+            <p>
+                <span class="summary-total--number">XX</span>
+                <span class="summary-total--label">local authorities have LGBT+ councillors</span>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 {% include components/data.html %}

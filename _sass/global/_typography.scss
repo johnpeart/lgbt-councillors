@@ -82,6 +82,20 @@ ul.local-authorities li a {
 
 }
 
+p.navigation-list--title {
+    @each $style, $sizes in $title2 {
+        @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
+    }
+    padding: 0 0 5px !important;
+}
+
+p.navigation-list--label {
+    @each $style, $sizes in $body {
+        @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
+    }
+    padding: 0 !important;
+}
+
 p.local-authority--name {
     @each $style, $sizes in $title2 {
         @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));

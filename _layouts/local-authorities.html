@@ -7,9 +7,9 @@ layout: default
 <p>Select a local authority from the list below to view LGBT+ councillors who are currently elected to that local authority's governing body.</p>
 
 <ul class="local-authorities">
-{% assign sorted = site.local-authorities %}
-{% for authority in sorted %}
+{% assign local-authorities = site.local-authorities | sort: "name" %}
 
+{% for authority in local-authorities %}
     <li>
         <a href="{{ relative_url | append: authority.url }}" title="See data for {{ authority.title }}">
             <p class="local-authority--name">{{ authority.name }}</p>

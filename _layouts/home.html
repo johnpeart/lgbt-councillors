@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+{% assign dataset = site.data.councillors | sort: "name" %}
+{% assign count--councillors = 0 %}
+{% assign count--local-authorities = 0 %}
+{% assign local-authorities = "" | split: "," %}
+
+<!-- ASSIGN DATES -->
+{% assign now = "now" | date: "%s" | times: 1 %}
+
+<section class="summary-data">
+
+    <h1>All data at a glance</h1>
+
+    <div class="summary-data">
+        <p class="lead">On {{ now | date: "%d %B %Y" }}, at least:</p>
+        
+        {% for entry in dataset %}
+          {% if entry.end-date == "present" or entry.end-date == blank %}
+            {% assign count--councillors = count--councillors | plus: 1 %}
+            {% assign local-authorities = local-authorities | push: entry.local-authority | uniq %}
+          {% endif %}
+        {% endfor %}
+        
+        {% for item in local-authorities %}
+          {% assign count--local-authorities = count--local-authorities | plus: 1 %}
+        {% endfor %}
+        
+        <div class="summary-block">
+
+            <p>
+                <span class="summary-total--number top-padding">{{ count--councillors }}</span>
+                <span class="summary-total--label">councillors are LGBT+</span>
+            </p>
+
+            <p>
+                <span class="summary-total--number">{{ count--local-authorities }}</span>
+                <span class="summary-total--label">local authorities have LGBT+ councillors</span>
+            </p>
+            
+        </div>
+        
+    </div>
+
+</section>
+
+<h1>Find data about LGBT+ councillors</h1>
+
+<ul class="navigation">
+    <li>
+        <a href="{{ relative_url | append: '/councillors' }}" title="See all councillor data">
+            <p class="navigation-list--title">All councillors</p>
+        </a>
+        <p class="navigation-list--label">View all sitting councillors who are LGBT+ for all local authorities in this dataset.</p>
+    </li>
+    <li>
+        <a href="{{ relative_url | append: '/local-authorities' }}" title="See all local authorities">
+            <p class="navigation-list--title">All local authorities</p>
+        </a>
+        <p class="navigation-list--label">View all local authorities in this dataset. Each local authority page contains data about the current LGBT+ councillors in that authority.</p>
+    </li>
+
+</ul>
