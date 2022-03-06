@@ -562,8 +562,8 @@ div.member-summary {
   position: relative;
 
   grid-template-columns: auto 1fr 20px;
-  grid-template-rows: auto auto;
-  grid-template-areas: "portrait member-name arrow" "portrait member-ward arrow";
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "portrait member-name arrow" "portrait member-party arrow" "portrait member-ward arrow";
 
 }
 
@@ -590,7 +590,7 @@ img.member-portrait {
   grid-area: portrait;
 
   border-radius: 100%;
-  @include toggleSizes(max-height, 50px, 50px, 60px, 70px, 75px);
+  @include toggleSizes(max-height, 60px, 60px, 80px, 90px, 90px);
   @include toggleSizes(margin-right, $container-padding, $container-padding, $container-padding * 2, $container-padding * 2, $container-padding * 2);
 
   border: 3px solid;
@@ -630,6 +630,16 @@ p.member-name {
   grid-area: member-name;
 
   @each $style, $sizes in $memberName {
+      @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
+  }
+
+}
+
+p.member-party {
+
+  grid-area: member-party;
+
+  @each $style, $sizes in $memberConstituency {
       @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
   }
 
