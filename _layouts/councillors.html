@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign dataset = site.data.councillors | sort: "name" %}
+{% assign dataset = site.data.councillors | sort: page.sort %}
 {% assign count--councillors = 0 %}
 {% assign count--local-authorities = 0 %}
 {% assign local-authorities = "" | split: "," %}
@@ -50,14 +50,33 @@ layout: default
 
 <section class="all-councillors">
   
-  <h1>All councillors</h1>
+  <span class="sort">
+    <h1>Councillors</h1>
+    <p><strong>Sort by:</strong>
+    <br>
+    {% if page.url contains '/sort/name' %}
+      Name, 
+    {% else %}
+      <a href="{% link councillors/by-name.md %}">Name</a>, 
+    {% endif %}
+    {% if page.url contains '/sort/local-authority' %}
+      Local authority,
+    {% else %}
+      <a href="{% link councillors/by-local-authority.md %}">Local authority</a>,
+    {% endif %}
+    {% if page.url contains '/sort/party' %}
+      Party
+    {% else %}
+      <a href="{% link councillors/by-party.md %}">Party</a>
+    {% endif %}</p>
+  </span>
   
   {% for entry in dataset %}
     {% if entry.end-date == "present" or entry.end-date == blank %}
     
     {% assign cllrName = entry.name %}
     {% assign cllrLocalAuthority = entry.local-authority %}
-    {% assign cllrAuthorityType = entry.local-authority-type %}
+    {% assign cllrLocalAuthorityType = entry.local-authority-type %}
     {% assign cllrElectoralDistrict = entry.electoral-district %}
     {% assign cllrParty = entry.party %}
     {% assign cllrStartDate = entry.start-date %}
@@ -69,18 +88,18 @@ layout: default
     {% assign cllrPhoto = entry.image-local-url %}
     
   
-    <details class="member">
+    <details class="cllr">
       <summary>
-          <div class="member-summary">
-              <img class="member-portrait {{ cllrParty }}" src="{{ cllrPhoto }}" loading="lazy">
-              <p class="member-name">{{ cllrName }}</p>
-              <p class="member-party">{{ cllrParty }}</p>
-              <p class="member-electoral-district">{{ cllrLocalAuthority }} {{ cllrAuthorityType }}</p>
+          <div class="cllr-summary">
+              <img class="cllr-portrait {{ cllrParty }}" src="{{ cllrPhoto }}" loading="lazy">
+              <p class="cllr-name">{{ cllrName }}</p>
+              <p class="cllr-party">{{ cllrParty }}</p>
+              <p class="cllr-electoral-district">{{ cllrLocalAuthority }} {{ cllrLocalAuthorityType }}</p>
               <span class="expand-icon"></span>
           </div>
       </summary>
     
-      <section class="member-info">
+      <section class="cllr-info">
     
           <p class="gender">
               <strong class="label">First elected</strong>
@@ -111,7 +130,7 @@ layout: default
           </p>
     
           {% if cllrNotes %}
-          <div class="member-notes">
+          <div class="cllr-notes">
               {{ cllrNotes | markdownify }}
           </div>
           {% endif %}

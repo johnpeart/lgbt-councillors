@@ -50,13 +50,13 @@ layout: default
 
 <ul class="navigation">
     <li>
-        <a href="{{ relative_url | append: '/councillors' }}" title="See all councillor data">
+        <a href="{% link councillors/by-name.md %}" title="See all councillor data">
             <p class="navigation-list--title">All councillors</p>
         </a>
         <p class="navigation-list--label">View all sitting councillors who are LGBT+ for all local authorities in this dataset.</p>
     </li>
     <li>
-        <a href="{{ relative_url | append: '/local-authorities' }}" title="See all local authorities">
+        <a href="{% link local-authorities/by-name.md %}" title="See all local authorities">
             <p class="navigation-list--title">All local authorities</p>
         </a>
         <p class="navigation-list--label">View all local authorities in this dataset. Each local authority page contains data about the current LGBT+ councillors in that authority.</p>

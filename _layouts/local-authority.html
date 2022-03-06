@@ -1,26 +1,53 @@
 ---
 layout: default
 ---
+{% assign dataset = site.data.councillors | sort: page.sort %}
+{% assign count--councillors = 0 %}
+{% assign count--parties = 0 %}
+{% assign pageName = page.name | slugify %}
+{% assign pageType = page.type | slugify %}
+{% assign parties = "" | split: "," %}
+
+<!-- ASSIGN DATES -->
 {% assign now = "now" | date: "%s" | times: 1 %}
 
 <section class="summary-data">
 
-    <h1>{{ page.name }}’s LGBT+ councillors at a glance</h1>
+    <h1>{{ page.name }} {{ page.type }} at a glance</h1>
 
     <div class="summary-data">
-        <p class="lead">As of {{ now | date: "%d %B %Y" }}, in {{ page.name }} {{ page.type }}, at least:</p>
-
+        <p class="lead">On {{ now | date: "%d %B %Y" }}, in {{ page.name }} {{ page.type }}, at least:</p>
+        
+        {% for entry in dataset %}
+          {% assign entryLA = entry.local-authority | slugify %}
+          {% assign entryLAType = entry.local-authority-type | slugify %}
+        
+          {% if entryLA == pageName and entryLAType == pageType %}
+          {% if entry.end-date == "present" or entry.end-date == blank %}
+            {% assign count--councillors = count--councillors | plus: 1 %}
+            {% assign parties = parties | push: entry.party | uniq %}
+          {% endif %}
+          {% endif %}
+          
+        {% endfor %}
+        
+        {% for item in parties %}
+          {% assign count--parties = count--parties | plus: 1 %}
+        {% endfor %}
+        
         <div class="summary-block">
 
             <p>
-                <span class="summary-total--number top-padding">XX</span>
-                <span class="summary-total--label">Councillors are LGBT+</span>
+                <span class="summary-total--number top-padding">{{ count--councillors }}</span>
+                <span class="summary-total--label">councillors are LGBT+</span>
             </p>
 
             <p>
-                <span class="summary-total--number">XX</span>
-                <span class="summary-total--label">local authorities have LGBT+ councillors</span>
+                <span class="summary-total--number">{{ count--parties }}</span>
+                <span class="summary-total--label">parties or groups have LGBT+ councillors</span>
             </p>
+            
+            
 
         </div>
 
@@ -28,4 +55,128 @@ layout: default
 
 </section>
 
-{% include components/data.html %}
+<section class="party-data">
+
+    <h1>LGBT+ councillors by party</h1>
+    
+    {% assign parties = parties | sort %}
+    {% for party in parties %}
+      {% assign partyTotalCllrs = 0 %}
+        
+        {% for cllr in dataset %}
+          {% assign cllrParty = cllr.party | slugify %}
+          {% assign comparatorParty = party | slugify %}
+          {% assign cllrLocalAuthority = cllr.local-authority | slugify %}
+          {% assign cllrLocalAuthorityType = cllr.local-authority-type | slugify %}
+          
+          {% if cllr.end-date == "present" or cllr.end-date == blank %}
+          {% if cllrParty == comparatorParty and cllrLocalAuthority == pageName and cllrLocalAuthorityType == pageType %}
+            {% assign partyTotalCllrs = partyTotalCllrs | plus: 1 %}
+          {% endif %}
+          {% endif %}
+        {% endfor %}
+      
+      <details class="party">
+
+        <summary>
+            <div class="party-summary">
+                {% include icons/{{ party | slugify }}.svg %}
+                <p class="party-name">{{ party }}</p>
+                <p class="party-total">{{ partyTotalCllrs }} LGBT+ councillor{% if partyTotalCllrs > 1 %}s{% endif %}</p>
+                <span class="expand-icon"></span>
+            </div>
+        </summary>
+        
+        <section class="party-cllrs container">
+          
+          {% for cllr in dataset %}
+            {% assign cllrParty = cllr.party | slugify %}
+            {% assign comparatorParty = party | slugify %}
+            {% assign cllrLocalAuthority = cllr.local-authority | slugify %}
+            {% assign cllrLocalAuthorityType = cllr.local-authority-type | slugify %}
+            
+            {% if cllr.end-date == "present" or cllr.end-date == blank %}
+            {% if cllrParty == comparatorParty and cllrLocalAuthority == pageName and cllrLocalAuthorityType == pageType %}
+            
+            {% assign cllrName = cllr.name %}
+            {% assign cllrLocalAuthority = cllr.local-authority %}
+            {% assign cllrLocalAuthorityType = cllr.local-authority-type %}
+            {% assign cllrElectoralDistrict = cllr.electoral-district %}
+            {% assign cllrParty = cllr.party %}
+            {% assign cllrLocalAuthority = cllr.local-authority %}
+            {% assign cllrLocalAuthorityType = cllr.local-authority-type %}
+            {% assign cllrStartDate = cllr.start-date %}
+            {% assign cllrIdentity = cllr.identity %}
+            {% assign cllrSourceName = cllr.source-description %}
+            {% assign cllrSourceURL = cllr.source-url %}
+            {% assign cllrSourceDate = cllr.source-date %}
+            {% assign cllrNotes = cllr.notes %}
+            {% assign cllrPhoto = cllr.image-local-url %}
+
+            <details class="cllr">
+  
+              <summary>
+                  <div class="cllr-summary">
+                      <img class="cllr-portrait {{ cllrParty }}" src="{{ cllrPhoto }}" loading="lazy">
+                      <p class="cllr-name">{{ cllrName }}</p>
+                      <p class="cllr-party">{{ cllrLocalAuthority }} {{ cllrLocalAuthorityType }}</p>
+                      <p class="cllr-electoral-district">{{ cllrElectoralDistrict }}</p>
+                      <span class="more-icon"></span>
+                  </div>
+              </summary>
+  
+              <section class="cllr-info">
+  
+                  <p class="gender">
+                      <strong class="label">First elected</strong>
+                      <span class="data">
+                          01 January 2022
+                      </span>
+                  </p>
+  
+                  <p class="identity">
+                      <strong class="label">Identity</strong>
+                      <span class="data">
+                          {% if mp.identity %}
+                          {{ mp.identity }}
+                          {% else %}
+                          LGBT+
+                          {% endif %}
+                      </span>
+                  </p>
+  
+                  <p class="source">
+                      <strong class="label">Source</strong>
+                      <span class="data">
+                          <a href="{{ mp.source-url }}">Name of publication</a>
+                      </span>
+                  </p>
+  
+                  <p class="source-access-date">
+                      <strong class="label">Source publication date</strong>
+                      <span class="data">
+                          01 January 2022
+                      </span>
+                  </p>
+  
+                  {% if mp.notes %}
+                  <div class="cllr-notes">
+                      {{ mp.notes | markdownify }}
+                  </div>
+                  {% endif %}
+  
+              </section>
+  
+            </details>
+        
+            {% endif %}
+            {% endif %}
+          {% endfor %}
+
+      </section>
+      
+      </details>
+      
+    {% endfor %}
+
+</section>

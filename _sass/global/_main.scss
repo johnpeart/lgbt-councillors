@@ -129,6 +129,27 @@ ul.navigation li {
 
 }
 
+span.sort {
+  
+  display: grid;
+  @include toggleSizes(grid-template-rows, auto auto, auto, auto, auto, auto);
+  @include toggleSizes(grid-template-columns, auto, auto auto, auto auto, auto auto, auto auto);
+  
+  border-bottom: 1px dotted map-get($colors, "grey-3");
+  margin: 0 0 $container-padding * 2 0;
+  
+  align-items: flex-end;
+  
+  h1, p {
+    padding-bottom: $container-padding;
+    margin-bottom: 0;
+  }
+  
+  p {
+    @include toggleSizes(justify-self, flex-start, flex-end, flex-end, flex-end, flex-end);
+  }
+}
+
 ul.local-authorities {
 
   display: grid;
@@ -483,7 +504,7 @@ section.all-councillors {
 
 }
 
-section.party-members {
+section.party-cllrs {
 
   display: grid;
 
@@ -491,7 +512,7 @@ section.party-members {
 
 }
 
-section.member-info {
+section.cllr-info {
 
   display: grid;
 
@@ -506,7 +527,7 @@ section.member-info {
 
 }
 
-section.member-info > p {
+section.cllr-info > p {
   padding: 0;
 
   &:nth-child(1) {
@@ -584,7 +605,7 @@ section.member-info > p {
 
 }
 
-div.member-notes {
+div.cllr-notes {
   grid-column: 1 / span 2;
   padding: $container-padding;
   border-top:  1px dotted map-get($colors, "grey-3");
@@ -594,13 +615,13 @@ div.member-notes {
   }
 }
 
-section.member-info p strong.label,
-section.member-info p span.data {
+section.cllr-info p strong.label,
+section.cllr-info p span.data {
   display: block;
   text-align: center;
 }
 
-details.member {
+details.cllr {
 
   display: grid;
 
@@ -613,14 +634,14 @@ details.member {
 
 }
 
-div.member-summary {
+div.cllr-summary {
 
   display: grid;
   position: relative;
 
   grid-template-columns: auto 1fr 20px;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "portrait member-name arrow" "portrait member-party arrow" "portrait member-ward arrow";
+  grid-template-areas: "portrait cllr-name arrow" "portrait cllr-party arrow" "portrait cllr-ward arrow";
 
 }
 
@@ -642,7 +663,7 @@ span.more-icon {
 
 }
 
-img.member-portrait {
+img.cllr-portrait {
 
   grid-area: portrait;
 
@@ -682,31 +703,31 @@ img.member-portrait {
 
 }
 
-p.member-name {
+p.cllr-name {
 
-  grid-area: member-name;
+  grid-area: cllr-name;
 
-  @each $style, $sizes in $memberName {
+  @each $style, $sizes in $cllrName {
       @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
   }
 
 }
 
-p.member-party {
+p.cllr-party {
 
-  grid-area: member-party;
+  grid-area: cllr-party;
 
-  @each $style, $sizes in $memberConstituency {
+  @each $style, $sizes in $cllrConstituency {
       @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
   }
 
 }
 
-p.member-electoral-district {
+p.cllr-electoral-district {
 
-  grid-area: member-ward;
+  grid-area: cllr-ward;
 
-  @each $style, $sizes in $memberConstituency {
+  @each $style, $sizes in $cllrConstituency {
       @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
   }
 
