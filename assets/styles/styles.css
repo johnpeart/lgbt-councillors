@@ -1419,7 +1419,7 @@ details.member { display: grid; width: 100%; justify-self: center; }
 
 details.member:last-child { margin-bottom: 0; }
 
-div.member-summary { display: grid; position: relative; grid-template-columns: auto 1fr 20px; grid-template-rows: auto auto; grid-template-areas: "portrait member-name arrow" "portrait member-ward arrow"; }
+div.member-summary { display: grid; position: relative; grid-template-columns: auto 1fr 20px; grid-template-rows: auto auto auto; grid-template-areas: "portrait member-name arrow" "portrait member-party arrow" "portrait member-ward arrow"; }
 
 span.more-icon { display: block; padding: 0; margin: 0; grid-area: arrow; justify-self: flex-end; align-self: center; width: 15px; height: 15px; background-repeat: no-repeat; }
 
@@ -1439,15 +1439,15 @@ span.more-icon { display: block; padding: 0; margin: 0; grid-area: arrow; justif
 
 @media only screen and (min-width: 1920px) { span.more-icon { height: 20px; } }
 
-img.member-portrait { grid-area: portrait; border-radius: 100%; max-height: 50px; margin-right: 15px; border: 3px solid; }
+img.member-portrait { grid-area: portrait; border-radius: 100%; max-height: 60px; margin-right: 15px; border: 3px solid; }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { img.member-portrait { max-height: 50px; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { img.member-portrait { max-height: 60px; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { img.member-portrait { max-height: 60px; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { img.member-portrait { max-height: 80px; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { img.member-portrait { max-height: 70px; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { img.member-portrait { max-height: 90px; } }
 
-@media only screen and (min-width: 1920px) { img.member-portrait { max-height: 75px; } }
+@media only screen and (min-width: 1920px) { img.member-portrait { max-height: 90px; } }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) { img.member-portrait { margin-right: 15px; } }
 
@@ -1520,6 +1520,56 @@ p.member-name { grid-area: member-name; font-size: 11pt; line-height: 15pt; padd
 @media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-name { text-align: left; } }
 
 @media only screen and (min-width: 1920px) { p.member-name { text-align: left; } }
+
+p.member-party { grid-area: member-party; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-party { font-size: 12pt; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-party { font-size: 13pt; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-party { font-size: 14pt; } }
+
+@media only screen and (min-width: 1920px) { p.member-party { font-size: 16pt; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-party { line-height: 17pt; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-party { line-height: 18pt; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-party { line-height: 19pt; } }
+
+@media only screen and (min-width: 1920px) { p.member-party { line-height: 21pt; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-party { padding: 2pt 0 0 0; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-party { padding: 2pt 0 0 0; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-party { padding: 2pt 0 0 0; } }
+
+@media only screen and (min-width: 1920px) { p.member-party { padding: 2pt 0 0 0; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-party { font-weight: normal; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-party { font-weight: normal; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-party { font-weight: normal; } }
+
+@media only screen and (min-width: 1920px) { p.member-party { font-weight: normal; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-party { font-style: normal; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-party { font-style: normal; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-party { font-style: normal; } }
+
+@media only screen and (min-width: 1920px) { p.member-party { font-style: normal; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.member-party { text-align: left; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.member-party { text-align: left; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.member-party { text-align: left; } }
+
+@media only screen and (min-width: 1920px) { p.member-party { text-align: left; } }
 
 p.member-electoral-district { grid-area: member-ward; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
 
