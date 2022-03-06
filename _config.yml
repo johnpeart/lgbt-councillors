@@ -13,7 +13,7 @@ url: "https://councillors.whoare.lgbt"
 ####################
 banner-mode: true
 banner-mode--header: "Under development"
-banner-mode--body: "This dataset is currently under active development and not currently up to date."
+banner-mode--body: "This dataset is currently under active development. The information contained on this website is not currently up to date."
 
 # Shows a blockquote on data pages exposing some of the underlying calculations
 error-check: true
