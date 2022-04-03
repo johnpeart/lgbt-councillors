@@ -3,9 +3,15 @@
       <div class="cllr-summary">
           <img class="cllr-portrait {{ cllrParty }}" src="{{ cllrPhoto }}" loading="lazy">
           <p class="cllr-name">{{ cllrName }}</p>
-          <p class="cllr-party">{{ cllrParty }}</p>
-          <p class="cllr-local-authority">{{ cllrLocalAuthority }} {{ cllrLocalAuthorityType }}, {{ cllrElectoralDistrict }}</p>
+          {% if page.layout == "councillors" %}
+          <p class="cllr-summary--row-1">{{ cllrParty }}</p>
+          <p class="cllr-summary--row-2">{{ cllrLocalAuthority }} {{ cllrLocalAuthorityType }}</p>
           <span class="expand-icon"></span>
+          {% else if page.layout == "local-authority" %}
+          <p class="cllr-summary--row-1">{{ cllrLocalAuthority }} {{ cllrLocalAuthorityType }}</p>
+          <p class="cllr-summary--row-2">{{ cllrElectoralDistrict }}</p>
+          <span class="more-icon"></span>
+          {% endif %}
       </div>
   </summary>
 
