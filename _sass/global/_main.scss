@@ -640,8 +640,8 @@ div.cllr-summary {
   position: relative;
 
   grid-template-columns: auto 1fr 20px;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "portrait cllr-name arrow" "portrait cllr-party arrow" "portrait cllr-authority arrow" "portrait cllr-district arrow";
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "portrait cllr-name arrow" "portrait cllr-party arrow" "portrait cllr-authority arrow";
 
 }
 
@@ -731,16 +731,6 @@ p.cllr-party {
 p.cllr-local-authority {
 
   grid-area: cllr-authority;
-
-  @each $style, $sizes in $cllrConstituency {
-      @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
-  }
-
-}
-
-p.cllr-electoral-district {
-
-  grid-area: cllr-district;
 
   @each $style, $sizes in $cllrConstituency {
       @include toggleSizes($style, map-get($sizes, "xs"),  map-get($sizes, "sm"),  map-get($sizes, "md"),  map-get($sizes, "lg"),  map-get($sizes, "xl"));
