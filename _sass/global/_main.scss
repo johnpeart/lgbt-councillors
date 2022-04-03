@@ -666,9 +666,14 @@ span.more-icon {
 img.cllr-portrait {
 
   grid-area: portrait;
+  
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
 
   border-radius: 100%;
   @include toggleSizes(max-height, 60px, 60px, 80px, 90px, 90px);
+  @include toggleSizes(max-width, 60px, 60px, 80px, 90px, 90px);
   @include toggleSizes(margin-right, $container-padding, $container-padding, $container-padding * 2, $container-padding * 2, $container-padding * 2);
 
   border: 3px solid;
