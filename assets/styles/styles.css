@@ -1599,7 +1599,7 @@ details.cllr { display: grid; width: 100%; justify-self: center; }
 
 details.cllr:last-child { margin-bottom: 0; }
 
-div.cllr-summary { display: grid; position: relative; grid-template-columns: auto 1fr 20px; grid-template-rows: auto auto auto; grid-template-areas: "portrait cllr-name arrow" "portrait cllr-party arrow" "portrait cllr-authority arrow"; }
+div.cllr-summary { display: grid; position: relative; grid-template-columns: auto 1fr 20px; grid-template-rows: auto auto auto; grid-template-areas: "portrait cllr-name arrow" "portrait cllr-row1 arrow" "portrait cllr-row2 arrow"; }
 
 span.more-icon { display: block; padding: 0; margin: 0; grid-area: arrow; justify-self: flex-end; align-self: center; width: 15px; height: 15px; background-repeat: no-repeat; }
 
@@ -1709,105 +1709,105 @@ p.cllr-name { grid-area: cllr-name; font-size: 11pt; line-height: 15pt; padding:
 
 @media only screen and (min-width: 1920px) { p.cllr-name { text-align: left; } }
 
-p.cllr-party { grid-area: cllr-party; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
+p.cllr-summary--row-1 { grid-area: cllr-row1; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-party { font-size: 12pt; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-1 { font-size: 12pt; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-party { font-size: 13pt; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-1 { font-size: 13pt; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-party { font-size: 14pt; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-1 { font-size: 14pt; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-party { font-size: 16pt; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-1 { font-size: 16pt; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-party { line-height: 17pt; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-1 { line-height: 17pt; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-party { line-height: 18pt; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-1 { line-height: 18pt; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-party { line-height: 19pt; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-1 { line-height: 19pt; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-party { line-height: 21pt; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-1 { line-height: 21pt; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-party { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-1 { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-party { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-1 { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-party { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-1 { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-party { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-1 { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-party { font-weight: normal; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-1 { font-weight: normal; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-party { font-weight: normal; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-1 { font-weight: normal; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-party { font-weight: normal; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-1 { font-weight: normal; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-party { font-weight: normal; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-1 { font-weight: normal; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-party { font-style: normal; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-1 { font-style: normal; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-party { font-style: normal; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-1 { font-style: normal; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-party { font-style: normal; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-1 { font-style: normal; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-party { font-style: normal; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-1 { font-style: normal; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-party { text-align: left; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-1 { text-align: left; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-party { text-align: left; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-1 { text-align: left; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-party { text-align: left; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-1 { text-align: left; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-party { text-align: left; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-1 { text-align: left; } }
 
-p.cllr-local-authority { grid-area: cllr-authority; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
+p.cllr-summary--row-2 { grid-area: cllr-row2; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { font-size: 12pt; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-2 { font-size: 12pt; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { font-size: 13pt; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-2 { font-size: 13pt; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { font-size: 14pt; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-2 { font-size: 14pt; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-local-authority { font-size: 16pt; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-2 { font-size: 16pt; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { line-height: 17pt; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-2 { line-height: 17pt; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { line-height: 18pt; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-2 { line-height: 18pt; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { line-height: 19pt; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-2 { line-height: 19pt; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-local-authority { line-height: 21pt; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-2 { line-height: 21pt; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-2 { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-2 { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-2 { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-local-authority { padding: 2pt 0 0 0; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-2 { padding: 2pt 0 0 0; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { font-weight: normal; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-2 { font-weight: normal; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { font-weight: normal; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-2 { font-weight: normal; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { font-weight: normal; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-2 { font-weight: normal; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-local-authority { font-weight: normal; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-2 { font-weight: normal; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { font-style: normal; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-2 { font-style: normal; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { font-style: normal; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-2 { font-style: normal; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { font-style: normal; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-2 { font-style: normal; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-local-authority { font-style: normal; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-2 { font-style: normal; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { text-align: left; } }
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-summary--row-2 { text-align: left; } }
 
-@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { text-align: left; } }
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-summary--row-2 { text-align: left; } }
 
-@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { text-align: left; } }
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-summary--row-2 { text-align: left; } }
 
-@media only screen and (min-width: 1920px) { p.cllr-local-authority { text-align: left; } }
+@media only screen and (min-width: 1920px) { p.cllr-summary--row-2 { text-align: left; } }
 
 details[open] > summary { border-bottom: 1px dotted #cbc9cd; }
 
