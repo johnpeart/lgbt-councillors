@@ -20,7 +20,7 @@
       <p class="first-elected">
           <strong class="label">First elected</strong>
           <span class="data">
-              {{ cllrStartDate }}
+              {{ cllrStartDate | date: "%d %B %Y" }}
           </span>
       </p>
 
@@ -39,9 +39,9 @@
       </p>
 
       <p class="source-access-date">
-          <strong class="label">Source publication date</strong>
+          <strong class="label">Source date</strong>
           <span class="data">
-              {{ cllrSourceDate }}
+              {{ cllrSourceDate | date: "%d %B %Y" }}
           </span>
       </p>
 
