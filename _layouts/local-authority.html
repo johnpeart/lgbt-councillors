@@ -18,14 +18,14 @@ layout: default
     <div class="summary-data">
         <p class="lead">On {{ now | date: "%d %B %Y" }}, in {{ page.name }} {{ page.type }}, at least:</p>
         
-        {% for entry in dataset %}
-          {% assign entryLA = entry.local-authority | slugify %}
-          {% assign entryLAType = entry.local-authority-type | slugify %}
+        {% for cllr in dataset %}
+          {% assign cllrLA = cllr.local-authority | slugify %}
+          {% assign cllrLAType = cllr.local-authority-type | slugify %}
         
-          {% if entryLA == pageName and entryLAType == pageType %}
-          {% if entry.end-date == "present" or entry.end-date == blank %}
+          {% if cllrLA == pageName and cllrLAType == pageType %}
+          {% if cllr.end-date == "present" or cllr.end-date == blank %}
             {% assign count--councillors = count--councillors | plus: 1 %}
-            {% assign parties = parties | push: entry.party | uniq %}
+            {% assign parties = parties | push: cllr.party | uniq %}
           {% endif %}
           {% endif %}
           
@@ -113,61 +113,7 @@ layout: default
             {% assign cllrNotes = cllr.notes %}
             {% assign cllrPhoto = cllr.image-local-url %}
 
-            <details class="cllr">
-  
-              <summary>
-                  <div class="cllr-summary">
-                      <img class="cllr-portrait {{ cllrParty }}" src="{{ cllrPhoto }}" loading="lazy">
-                      <p class="cllr-name">{{ cllrName }}</p>
-                      <p class="cllr-party">{{ cllrLocalAuthority }} {{ cllrLocalAuthorityType }}</p>
-                      <p class="cllr-electoral-district">{{ cllrElectoralDistrict }}</p>
-                      <span class="more-icon"></span>
-                  </div>
-              </summary>
-  
-              <section class="cllr-info">
-  
-                  <p class="gender">
-                      <strong class="label">First elected</strong>
-                      <span class="data">
-                          01 January 2022
-                      </span>
-                  </p>
-  
-                  <p class="identity">
-                      <strong class="label">Identity</strong>
-                      <span class="data">
-                          {% if mp.identity %}
-                          {{ mp.identity }}
-                          {% else %}
-                          LGBT+
-                          {% endif %}
-                      </span>
-                  </p>
-  
-                  <p class="source">
-                      <strong class="label">Source</strong>
-                      <span class="data">
-                          <a href="{{ mp.source-url }}">Name of publication</a>
-                      </span>
-                  </p>
-  
-                  <p class="source-access-date">
-                      <strong class="label">Source publication date</strong>
-                      <span class="data">
-                          01 January 2022
-                      </span>
-                  </p>
-  
-                  {% if mp.notes %}
-                  <div class="cllr-notes">
-                      {{ mp.notes | markdownify }}
-                  </div>
-                  {% endif %}
-  
-              </section>
-  
-            </details>
+            {% include components/councillor-data.html %}
         
             {% endif %}
             {% endif %}

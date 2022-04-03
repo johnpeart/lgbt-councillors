@@ -17,10 +17,10 @@ layout: default
     <div class="summary-data">
         <p class="lead">On {{ now | date: "%d %B %Y" }}, at least:</p>
         
-        {% for entry in dataset %}
-          {% if entry.end-date == "present" or entry.end-date == blank %}
+        {% for cllr in dataset %}
+          {% if cllr.end-date == "present" or cllr.end-date == blank %}
             {% assign count--councillors = count--councillors | plus: 1 %}
-            {% assign local-authorities = local-authorities | push: entry.local-authority | uniq %}
+            {% assign local-authorities = local-authorities | push: cllr.local-authority | uniq %}
           {% endif %}
         {% endfor %}
         
@@ -71,73 +71,24 @@ layout: default
     {% endif %}</p>
   </span>
   
-  {% for entry in dataset %}
-    {% if entry.end-date == "present" or entry.end-date == blank %}
+  {% for cllr in dataset %}
+    {% if cllr.end-date == "present" or cllr.end-date == blank %}
     
-    {% assign cllrName = entry.name %}
-    {% assign cllrLocalAuthority = entry.local-authority %}
-    {% assign cllrLocalAuthorityType = entry.local-authority-type %}
-    {% assign cllrElectoralDistrict = entry.electoral-district %}
-    {% assign cllrParty = entry.party %}
-    {% assign cllrStartDate = entry.start-date %}
-    {% assign cllrIdentity = entry.identity %}
-    {% assign cllrSourceName = entry.source-description %}
-    {% assign cllrSourceURL = entry.source-url %}
-    {% assign cllrSourceDate = entry.source-date %}
-    {% assign cllrNotes = entry.notes %}
-    {% assign cllrPhoto = entry.image-local-url %}
+    {% assign cllrName = cllr.name %}
+    {% assign cllrLocalAuthority = cllr.local-authority %}
+    {% assign cllrLocalAuthorityType = cllr.local-authority-type %}
+    {% assign cllrElectoralDistrict = cllr.electoral-district %}
+    {% assign cllrParty = cllr.party %}
+    {% assign cllrStartDate = cllr.start-date %}
+    {% assign cllrIdentity = cllr.identity %}
+    {% assign cllrSourceName = cllr.source-description %}
+    {% assign cllrSourceURL = cllr.source-url %}
+    {% assign cllrSourceDate = cllr.source-date %}
+    {% assign cllrNotes = cllr.notes %}
+    {% assign cllrPhoto = cllr.image-local-url %}
     
-  
-    <details class="cllr">
-      <summary>
-          <div class="cllr-summary">
-              <img class="cllr-portrait {{ cllrParty }}" src="{{ cllrPhoto }}" loading="lazy">
-              <p class="cllr-name">{{ cllrName }}</p>
-              <p class="cllr-party">{{ cllrParty }}</p>
-              <p class="cllr-electoral-district">{{ cllrLocalAuthority }} {{ cllrLocalAuthorityType }}</p>
-              <span class="expand-icon"></span>
-          </div>
-      </summary>
+    {% include components/councillor-data.html %}
     
-      <section class="cllr-info">
-    
-          <p class="gender">
-              <strong class="label">First elected</strong>
-              <span class="data">
-                  {{ cllrStartDate }}
-              </span>
-          </p>
-    
-          <p class="identity">
-              <strong class="label">Identity</strong>
-              <span class="data">
-                  {{ cllrIdentity | default: "LGBT+" }}
-              </span>
-          </p>
-    
-          <p class="source">
-              <strong class="label">Source</strong>
-              <span class="data">
-                  <a href="{{ cllrSourceURL }}">{{ cllrSourceName }}</a>
-              </span>
-          </p>
-    
-          <p class="source-access-date">
-              <strong class="label">Source publication date</strong>
-              <span class="data">
-                  {{ cllrSourceDate }}
-              </span>
-          </p>
-    
-          {% if cllrNotes %}
-          <div class="cllr-notes">
-              {{ cllrNotes | markdownify }}
-          </div>
-          {% endif %}
-    
-      </section>
-    </details>
-  
     {% endif %}
   {% endfor %}
   

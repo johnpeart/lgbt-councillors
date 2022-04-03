@@ -1,0 +1,50 @@
+<details class="cllr">
+  <summary>
+      <div class="cllr-summary">
+          <img class="cllr-portrait {{ cllrParty }}" src="{{ cllrPhoto }}" loading="lazy">
+          <p class="cllr-name">{{ cllrName }}</p>
+          <p class="cllr-party">{{ cllrParty }}</p>
+          <p class="cllr-local-authority">{{ cllrLocalAuthority }} {{ cllrLocalAuthorityType }}</p>
+          <p class="cllr-electoral-district">{{ cllrElectoralDistrict }}</p>
+          <span class="expand-icon"></span>
+      </div>
+  </summary>
+
+  <section class="cllr-info">
+
+      <p class="first-elected">
+          <strong class="label">First elected</strong>
+          <span class="data">
+              {{ cllrStartDate }}
+          </span>
+      </p>
+
+      <p class="identity">
+          <strong class="label">Identity</strong>
+          <span class="data">
+              {{ cllrIdentity | default: "LGBT+" }}
+          </span>
+      </p>
+
+      <p class="source">
+          <strong class="label">Source</strong>
+          <span class="data">
+              <a href="{{ cllrSourceURL }}">{{ cllrSourceName }}</a>
+          </span>
+      </p>
+
+      <p class="source-access-date">
+          <strong class="label">Source publication date</strong>
+          <span class="data">
+              {{ cllrSourceDate }}
+          </span>
+      </p>
+
+      {% if cllrNotes %}
+      <div class="cllr-notes">
+          {{ cllrNotes | markdownify }}
+      </div>
+      {% endif %}
+
+  </section>
+</details>
