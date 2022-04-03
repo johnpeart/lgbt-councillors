@@ -1599,7 +1599,7 @@ details.cllr { display: grid; width: 100%; justify-self: center; }
 
 details.cllr:last-child { margin-bottom: 0; }
 
-div.cllr-summary { display: grid; position: relative; grid-template-columns: auto 1fr 20px; grid-template-rows: auto auto auto; grid-template-areas: "portrait cllr-name arrow" "portrait cllr-party arrow" "portrait cllr-ward arrow"; }
+div.cllr-summary { display: grid; position: relative; grid-template-columns: auto 1fr 20px; grid-template-rows: auto auto auto auto; grid-template-areas: "portrait cllr-name arrow" "portrait cllr-party arrow" "portrait cllr-authority arrow" "portrait cllr-district arrow"; }
 
 span.more-icon { display: block; padding: 0; margin: 0; grid-area: arrow; justify-self: flex-end; align-self: center; width: 15px; height: 15px; background-repeat: no-repeat; }
 
@@ -1751,7 +1751,57 @@ p.cllr-party { grid-area: cllr-party; font-size: 10pt; line-height: 15pt; paddin
 
 @media only screen and (min-width: 1920px) { p.cllr-party { text-align: left; } }
 
-p.cllr-electoral-district { grid-area: cllr-ward; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
+p.cllr-local-authority { grid-area: cllr-authority; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { font-size: 12pt; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { font-size: 13pt; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { font-size: 14pt; } }
+
+@media only screen and (min-width: 1920px) { p.cllr-local-authority { font-size: 16pt; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { line-height: 17pt; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { line-height: 18pt; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { line-height: 19pt; } }
+
+@media only screen and (min-width: 1920px) { p.cllr-local-authority { line-height: 21pt; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { padding: 2pt 0 0 0; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { padding: 2pt 0 0 0; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { padding: 2pt 0 0 0; } }
+
+@media only screen and (min-width: 1920px) { p.cllr-local-authority { padding: 2pt 0 0 0; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { font-weight: normal; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { font-weight: normal; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { font-weight: normal; } }
+
+@media only screen and (min-width: 1920px) { p.cllr-local-authority { font-weight: normal; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { font-style: normal; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { font-style: normal; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { font-style: normal; } }
+
+@media only screen and (min-width: 1920px) { p.cllr-local-authority { font-style: normal; } }
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-local-authority { text-align: left; } }
+
+@media only screen and (min-width: 1024px) and (max-width: 1359px) { p.cllr-local-authority { text-align: left; } }
+
+@media only screen and (min-width: 1360px) and (max-width: 1919px) { p.cllr-local-authority { text-align: left; } }
+
+@media only screen and (min-width: 1920px) { p.cllr-local-authority { text-align: left; } }
+
+p.cllr-electoral-district { grid-area: cllr-district; font-size: 10pt; line-height: 15pt; padding: 0 0 0 0; font-weight: normal; font-style: normal; text-align: left; }
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) { p.cllr-electoral-district { font-size: 12pt; } }
 
