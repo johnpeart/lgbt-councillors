@@ -1,7 +1,11 @@
 <details class="cllr">
   <summary>
       <div class="cllr-summary">
-          <img class="cllr-portrait {{ cllrParty }}" src="{{ cllrPhoto }}" loading="lazy">
+          {% if cllrPhoto %}
+          <img class="cllr-portrait {{ cllrParty | slugify }}" src="{{ cllrPhoto }}" loading="lazy">
+          {% else %}
+          <img class="cllr-portrait {{ cllrParty | slugify }}" src="/assets/images/councillors/generic.jpg" loading="lazy">
+          {% endif %}
           <p class="cllr-name">{{ cllrName }}</p>
           {% if page.layout == "councillors" %}
           <p class="cllr-summary--row-1">{{ cllrParty }}</p>
